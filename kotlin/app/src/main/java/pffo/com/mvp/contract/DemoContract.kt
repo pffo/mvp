@@ -1,5 +1,7 @@
 package com.ffo.ipet.mvp.contract
 
+import com.ffo.ipet.mvp.IView
+
 /**
  * @author: huchunhua
  * @create_time: 2018/4/26
@@ -14,7 +16,7 @@ public interface DemoContract{
     /**
      * View
      */
-    public interface DemoView{
+    public interface DemoView {
         fun operationUI(data: Any)
     }
 

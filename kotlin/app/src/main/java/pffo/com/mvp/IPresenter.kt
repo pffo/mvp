@@ -10,7 +10,7 @@ package com.ffo.ipet.mvp
  * @describe: 一句话描述
  */
 
-public interface IPresenter<V> {
+public interface IPresenter<in V> {
 
     /**
      * bind View

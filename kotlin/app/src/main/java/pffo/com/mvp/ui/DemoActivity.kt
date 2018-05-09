@@ -1,13 +1,9 @@
 package com.ffo.ipet.mvp.ui
 
-import android.app.Activity
 import android.os.Bundle
 import android.widget.Toast
-import com.ffo.ipet.application.MyApplication.Companion.context
 import com.ffo.ipet.mvp.BaseActivity
-import com.ffo.ipet.mvp.IView
 import com.ffo.ipet.mvp.contract.DemoContract
-import com.ffo.ipet.mvp.imp.BasePresenter
 import com.ffo.ipet.mvp.presenter.DemoPresenter
 
 /**
@@ -19,15 +15,14 @@ import com.ffo.ipet.mvp.presenter.DemoPresenter
  * @mail: huchunhua5@wasu.com
  * @describe: 一句话描述
  */
-class DemoActivity: BaseActivity<DemoPresenter<IView>>(),DemoContract.DemoView{
+class DemoActivity: BaseActivity<DemoPresenter>(),DemoContract.DemoView{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         iPersenter.loadUI()
-
     }
 
-    override fun createPresenter(): DemoPresenter<IView> {
+    override fun createPresenter(): DemoPresenter {
         return DemoPresenter()
     }
 

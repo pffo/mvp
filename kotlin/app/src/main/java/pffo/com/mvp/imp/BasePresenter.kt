@@ -1,10 +1,5 @@
 package com.ffo.ipet.mvp.imp
 
-import android.content.Context
-import android.icu.lang.UCharacter.GraphemeClusterBreak.V
-import android.view.View
-import com.ffo.ipet.application.MyApplication.Companion.context
-import com.ffo.ipet.mvp.IModel
 import com.ffo.ipet.mvp.IPresenter
 import com.ffo.ipet.mvp.IView
 import com.ffo.util.log.LogUtil
@@ -20,8 +15,7 @@ import java.lang.ref.WeakReference
  * @describe: 一句话描述
  */
 
-public open class BasePresenter<V> : IPresenter<V> {
-
+open class BasePresenter<V : IView> : IPresenter<V> {
     companion object {
         val log: LogUtil = LogUtil(BasePresenter::class.simpleName.toString())
     }

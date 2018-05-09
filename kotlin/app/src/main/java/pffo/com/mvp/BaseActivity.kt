@@ -7,7 +7,6 @@ import android.os.Parcel
 import android.os.Parcelable
 import com.ffo.ipet.mvp.contract.DemoContract
 import com.ffo.ipet.mvp.imp.BasePresenter
-import com.ffo.ipet.ui.activity.BaseActivity
 import com.ffo.util.log.LogUtil
 
 /**
@@ -19,7 +18,7 @@ import com.ffo.util.log.LogUtil
  * @mail: huchunhua5wasu.com
  * @describe: 一句话描述
  */
-public open abstract class BaseActivity<V: IView , P : BasePresenter<V , V>>() : Activity(), IView {
+open abstract class BaseActivity<P : BasePresenter<IView>>() : Activity(), IView {
 
     companion object {
         val log: LogUtil = LogUtil(BaseActivity::class.simpleName.toString())

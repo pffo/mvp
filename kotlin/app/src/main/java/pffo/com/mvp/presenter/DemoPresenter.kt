@@ -19,7 +19,7 @@ import org.jetbrains.annotations.Contract
  * @mail: huchunhua5@wasu.com
  * @describe: 一句话描述
  */
-public class DemoPresenter<T>: BasePresenter<DemoActivity,T>(), DemoContract.DemoPresenter {
+public class DemoPresenter: BasePresenter<DemoActivity>(), DemoContract.DemoPresenter {
 
     val iModel: DemoContract.IModel = DemoModel()
 
@@ -30,6 +30,7 @@ public class DemoPresenter<T>: BasePresenter<DemoActivity,T>(), DemoContract.Dem
     override fun loadUI() {
         iModel.operationData(object : DemoContract.IModel.OperationDataListener{
             override fun completed(data: Any) {
+//                iView
             }
         })
     }
